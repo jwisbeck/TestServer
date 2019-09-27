@@ -1,0 +1,38 @@
+{
+  "name": "TestServer",
+  "version": "1.0.0",
+  "description": "For testing CRUD",
+  "license": "MIT",
+  "author": "Jacob Wisbeck",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon src/server.js",
+    "clear_jest": "jest --clearCache",
+    "test": "clear && yarn clear_jest && NODE_ENV=test jest --forceExit --runInBand"
+  },
+  "dependencies": {
+    "docker": "^1.0.0",
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "jest-extended": "^0.11.2",
+    "knex": "^0.19.4",
+    "koa": "^2.8.1",
+    "koa-body": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.19.2",
+    "objection": "^1.6.9",
+    "pg": "^7.12.1",
+    "postgresql": "^0.0.1",
+    "sqlite3": "^4.1.0",
+    "supertest": "^4.0.2",
+    "swagger": "^0.7.5",
+    "swagger-client": "^3.9.4",
+    "swagger-js-codegen": "^1.13.0"
+  },
+  "private": true,
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ]
+  }
+}
