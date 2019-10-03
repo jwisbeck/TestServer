@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "docker": "^1.0.0",
+    "dotenv": "^8.1.0",
+    "env-cmd": "^10.0.1",
     "eslint": "^6.4.0",
     "jest": "^24.9.0",
     "jest-extended": "^0.11.2",
@@ -22,6 +24,7 @@
     "nodemon": "^1.19.2",
     "objection": "^1.6.9",
     "pg": "^7.12.1",
+    "pm2": "^3.5.1",
     "postgresql": "^0.0.1",
     "sqlite3": "^4.1.0",
     "supertest": "^4.0.2",
