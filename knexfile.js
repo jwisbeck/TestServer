@@ -41,21 +41,20 @@ module.exports = {
     }
   },
 
-  production: {
-    client: 'postgresql',
+  development: {
+    client: 'pg',
     connection: {
-      database: 'recipes',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
+      host : '142.93.236.158',
+      user : 'dev',
+      password : 'dbpassword',
+      database : 'testdatabase',
+      charset: 'utf8'
     },
     migrations: {
-      tableName: 'dishes',
-      tableName: 'ingredients',
-      tableName: 'the_book'
+      directory: __dirname + '/knex/migrations',
+    },
+    seeds: {
+      directory: __dirname + '/knex/seeds'
     }
   }
 

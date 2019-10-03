@@ -57,7 +57,7 @@ router.put('/:bookId', async ctx => {
   };
   await TheBookRepository.update(bookId,bookEntity);
   ctx.body = await TheBookRepository.findById(bookId);
-  
+  ctx.statusCode=200;
 
 });
 module.exports = router.routes();

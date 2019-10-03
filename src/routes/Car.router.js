@@ -36,11 +36,13 @@ router.post('/owners', async ctx => {
 
   ctx.body = await CarOwnerRepository.findById(id);
 });
+
 router.delete('/:ownerId', async ctx => {
   const { ownerId } = ctx.params;
   await CarOwnerRepository.remove(ownerId);
   ctx.body = { status: 'ok' };
 });
+
 router.delete('cars/:carId', async ctx => {
   const { carId } = ctx.params;
   await CarRepository.remove(carId);
@@ -59,6 +61,7 @@ router.put('owners/:ownerId/cars/:carId', async ctx => {
   ctx.body = await CarRepository.findById(carId);
   ctx.status=200;
 });
+
 router.put('owners/:ownerId', async ctx => {
   const { ownerId } = ctx.params;
   const { name } = ctx.request.body;
