@@ -8,6 +8,6 @@ app.use(require('./routes/Dish.router'));
 app.use(require('./routes/Ingredients.router'));
 app.use(require('./routes/TheBook.router'));
 if( process.env.NODE_ENV!=="test")
-app.listen('3000');
-//console.log("server started");
+app.listen(process.env.PORT);
+console.log("server started on",`${process.env.PORT}`);
 module.exports=app;

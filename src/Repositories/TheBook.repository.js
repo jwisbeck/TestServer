@@ -15,12 +15,11 @@ const TheBookRepository = {
 
   },
   findByIdWithIngredients(dishId){
-
-    return TheBook.query().select('dishes.dish_name','dishes.description').where('the_book.dish_id',dishId).union(TheBook.query().select('ingredients.ingredient_name','the_book.amount').where('the_book.dish_id',dishId).joinRelation({'ingredients':true})).joinRelation({'dishes':true});
+    return TheBook.query().select().joinRelation('')
   },
   findAllIngredientNames(dish_id){
     //console.log('Find ingredients');
-    return TheBook.query().select('ingredients.ingredient_name','the_book.amount').joinRelation('ingredients').where('the_book.dish_id',dish_id);
+    return TheBook.query().select('ingredients.ingredient_name','the_book.amount').joinRelation( 'ingredients').where('the_book.dish_id',dish_id);
   },
   createBookEntity(bookEntity){
     return TheBook.query().insert(bookEntity);
