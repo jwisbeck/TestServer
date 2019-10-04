@@ -7,12 +7,11 @@ if (process.env.NODE_ENV === undefined) {
 const config = {
   client: 'pg',
   connection: {
-    host : '142.93.236.158',
     host: get(process, 'env.DB_HOST', 'localhost'),
     user: get(process, 'env.DB_USER', 'dev'),
     password: get(process, 'env.DB_PASS', 'dev'),
-    database: get(process, 'env.DB_NAME', 'testdatabase'),
-    port: get(process, 'env.DB_PORT', 5433),
+    database: get(process, 'env.DB_NAME', 'recipes'),
+    port: get(process, 'env.DB_PORT', 5432),
     timezone: 'utc'
   },
   migrations: {
@@ -23,9 +22,9 @@ const config = {
   }
 }
 if (process.env.CODESHIP) {
-  config.connection.user = get(process, 'env.PG_USER', 'user');
-  config.connection.password = get(process, 'env.PG_PASSWORD', 'password');
-  config.connection.database = 'test';
+  config.connection.user = get(process, 'env.PG_USER', 'dev');
+  config.connection.password = get(process, 'env.PG_PASSWORD', 'dev');
+  config.connection.database = get(process, 'env.PG_NAME', 'testdatabase');
   config.connection.port = 5432;
 }
 module.exports = {
