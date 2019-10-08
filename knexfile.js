@@ -15,10 +15,10 @@ const config = {
     timezone: 'utc'
   },
   migrations: {
-    directory: __dirname + '/knex/migrations',
+    directory: __dirname + '/database/migrations',
   },
   seeds: {
-    directory: __dirname + '/knex/seeds'
+    directory: __dirname + '/database/seeds'
   }
 }
 if (process.env.CODESHIP) {
