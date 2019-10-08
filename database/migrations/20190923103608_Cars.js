@@ -4,7 +4,7 @@ exports.up = async function(knex) {
     t.increments('id').primary(),
     t.string('make'),
     t.string('model'),
-    t.number('year'),
+    t.integer('year'),
     t.string('color'),
     t.integer('owner_id').comment('ownerId').references('carOwners.id').onDelete('CASCADE'),
     t.string('description').comment('the description')
