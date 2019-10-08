@@ -1,4 +1,4 @@
-const Koa = require('Koa');
+const Koa = require('koa');
 const  KoaBody = require('koa-body');
 const Router = require('koa-router');
 const knex = require('knex');
@@ -34,13 +34,7 @@ router.delete('/:ingredientId', async ctx => {
   ctx.body = { status: 'ok' };
 
 });
-router.delete('/', async ctx => {
-//console.log('delete test unimplemented',ctx.params, ctx.request.body, ctx.request.query);
-  //const { ingredientId } = ctx.params;
-  await IngredientsRepository.removeAll();
-  ctx.body = { status: 'ok' };
 
-});
 router.put('/:ingredientId', async ctx => {
   console.log('put test',ctx.params, ctx.request.body, ctx.request.query);
   const { ingredientId } = ctx.params;

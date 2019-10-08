@@ -1,4 +1,4 @@
-const Koa = require('Koa');
+const Koa = require('koa');
 const  KoaBody = require('koa-body');
 const Router = require('koa-router');
 const knex = require('knex');
