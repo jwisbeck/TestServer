@@ -23,7 +23,7 @@ const config = {
 }
 if (process.env.CODESHIP) {
   config.connection.user = get(process, 'env.PG_USER', 'dev');
-  config.connection.password = get(process, 'env.PG_PASSWORD', 'dev');
+  config.connection.password = get(process, 'env.PG_PASSWORD', 'testpass');
   config.connection.database = get(process, 'env.PG_NAME', 'testdatabase');
   config.connection.port = 5432;
 }
