@@ -8,3 +8,4 @@ module.exports = class Ingredient extends Model{
     return 'ingredients';
   }
 }
+ 
