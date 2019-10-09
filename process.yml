@@ -1,0 +1,4 @@
+apps:
+  - script: src/server.js
+    name: testserver
+    restart_delay: 1000
