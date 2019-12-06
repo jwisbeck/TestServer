@@ -4,9 +4,10 @@ const KoaBody = require('koa-body');
 const app = new Koa();
 
 app.use(KoaBody());
-app.use(require('./routes/Dish.router'));
-app.use(require('./routes/Ingredients.router'));
-app.use(require('./routes/TheBook.router'));
+app.use(require('./old_routes/Dish.router'));
+app.use(require('./old_routes/Ingredients.router'));
+app.use(require('./old_routes/TheBook.router'));
+app.use(require('./routes/Badge.router'));
 if( process.env.NODE_ENV!=="test")
 app.listen(process.env.PORT);
 console.log("server started on",`${process.env.PORT}`);
