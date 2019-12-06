@@ -6,7 +6,7 @@ const { path } = require('path');
 const knexCon = require('../../knexfile');
 const knexObj = knex(knexCon.development);
 const router = new Router();
-const DishRepository = require('../Repositories/Dish.repository.js');
+const DishRepository = require('../old_repositories/Dish.repository.js');
 
 const IngredientsRepository = require('../old_repositories/Ingredients.repository.js');
 const TheBookRepository = require('../old_repositories/TheBook.repository.js');

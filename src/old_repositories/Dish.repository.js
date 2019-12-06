@@ -1,4 +1,4 @@
-const Dish = require('../Models/Dish.js');
+const Dish = require('../old_models/Dish.js');
 //console.log(Dish);
 
 const DishRepository = {

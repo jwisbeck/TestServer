@@ -1,5 +1,5 @@
 
-exports.up = function(knex) {
+exports.up = async function(knex) {
   await knex.schema.createTable('badges',t=>{
     t.increments('id').primary();
     t.string('name').notNullable();
@@ -14,7 +14,7 @@ exports.up = function(knex) {
   })
 };
 
-exports.down = function(knex) {
+exports.down = async function(knex) {
   await knex.schema.dropTableIfExists('badge_owners');
   await knex.schema.dropTableIfExists('badges');
 };

@@ -1,3 +1,6 @@
+const Badge = require('../Models/Badge.js');
+
+
 const BadgeRepository = {
   findById(id) {
     return Badge.query().findById(id);
@@ -6,8 +9,8 @@ const BadgeRepository = {
     //console.log('findMany');
     return Badge.query().select('*');
   },
-   createBadgeEntity(badgeEntity){
-    return Badge.query().insert(badgeEntity);
+   createBadgeEntity(entity){
+    return Badge.query().insert(entity);
   },
   remove(id){
     return Badge.query().findById(id).del();
