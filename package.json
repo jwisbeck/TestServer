@@ -24,7 +24,7 @@
     "koa-body": "^4.1.1",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "nodemon": "^1.19.2",
     "objection": "^1.6.9",
     "pg": "^7.12.1",
